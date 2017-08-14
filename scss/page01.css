@@ -75,14 +75,13 @@ hr {
           background: url("../img/h_arrow.gif") no-repeat left; }
       .wrapper .header .menu-header-tb .search-header {
         float: right;
-        margin-top: 20px; }
-        .wrapper .header .menu-header-tb .search-header input {
-          width: 200px;
-          background-color: #999999;
-          padding: 3px;
-          border-radius: 3px;
-          outline: none;
-          border: 1px solid #999999; }
+        margin-top: 20px;
+        width: 200px;
+        background-color: #999999;
+        padding: 3px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid #999999; }
     .wrapper .header img {
       width: 50%; }
       @media only screen and (min-width: 641px) {
@@ -102,14 +101,14 @@ hr {
     @media only screen and (min-width: 641px) {
       .wrapper .nav-bar {
         display: block; } }
-    .wrapper .nav-bar .bar-home ul li {
+    .wrapper .nav-bar .bar-home li {
       list-style: none;
       font-size: 1.1rem;
       margin-bottom: 20px;
       display: table;
       position: relative;
       overflow: hidden; }
-      .wrapper .nav-bar .bar-home ul li .line {
+      .wrapper .nav-bar .bar-home li .line {
         width: 7px;
         height: 1px;
         background-color: red;
@@ -122,14 +121,14 @@ hr {
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s; }
-      .wrapper .nav-bar .bar-home ul li:hover .line {
+      .wrapper .nav-bar .bar-home li:hover .line {
         width: 100px; }
-      .wrapper .nav-bar .bar-home ul li:hover a {
+      .wrapper .nav-bar .bar-home li:hover a {
         font-weight: bold; }
-      .wrapper .nav-bar .bar-home ul li a {
+      .wrapper .nav-bar .bar-home li a {
         color: #000;
         text-decoration: none; }
-      .wrapper .nav-bar .bar-home ul li.bar-title a {
+      .wrapper .nav-bar .bar-home li.bar-title a {
         border-bottom: 1px solid red; }
     .wrapper .nav-bar .bar-special {
       font-family: "Century Gothic";
@@ -144,7 +143,8 @@ hr {
         height: 100px;
         border: 1px solid #ffffff; }
     .wrapper .nav-bar .bar-img {
-      margin: 60px 30px; }
+      text-align: center;
+      margin: 60px 0; }
     .wrapper .nav-bar .bar-new {
       color: #000;
       margin: 0 30px; }
@@ -153,6 +153,7 @@ hr {
         text-align: center;
         font-weight: 700; }
       .wrapper .nav-bar .bar-new .item-new {
+        padding-bottom: 15px;
         margin: 20px 0;
         font-size: 1rem;
         border-bottom: 1px solid #000; }
@@ -177,38 +178,37 @@ hr {
       text-align: center;
       padding-bottom: 35px;
       margin-bottom: 15px;
-      border-bottom: 1px solid #ffffff; }
-      .wrapper .tab-menu .home-menu ul {
-        margin-top: 35px; }
-        .wrapper .tab-menu .home-menu ul li {
-          position: relative;
-          list-style: none;
-          font-size: 1.2rem;
-          margin-bottom: 25px;
-          padding-bottom: 5px; }
-          .wrapper .tab-menu .home-menu ul li:hover .line {
-            background-color: transparent;
+      border-bottom: 1px solid #ffffff;
+      margin-top: 35px; }
+      .wrapper .tab-menu .home-menu li {
+        position: relative;
+        list-style: none;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-bottom: 5px; }
+        .wrapper .tab-menu .home-menu li:hover .line {
+          background-color: transparent;
+          border-bottom: 1px solid #FA2908; }
+        .wrapper .tab-menu .home-menu li a {
+          text-decoration: none;
+          color: #fff;
+          padding-bottom: 4px; }
+          .wrapper .tab-menu .home-menu li a.home-menu-title {
+            font-size: 1.3rem;
             border-bottom: 1px solid #FA2908; }
-          .wrapper .tab-menu .home-menu ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding-bottom: 4px; }
-            .wrapper .tab-menu .home-menu ul li a.home-menu-title {
-              font-size: 1.3rem;
-              border-bottom: 1px solid #FA2908; }
-          .wrapper .tab-menu .home-menu ul li .line {
-            height: 1px;
-            width: 10px;
-            background-color: #FA2908;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -khtml-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%); }
+        .wrapper .tab-menu .home-menu li .line {
+          height: 1px;
+          width: 10px;
+          background-color: #FA2908;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -khtml-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%); }
     .wrapper .tab-menu .special-movie {
       padding: 0 80px;
       padding-bottom: 35px;
@@ -222,8 +222,8 @@ hr {
         height: 110px;
         border: 2px solid #ffffff; }
     .wrapper .tab-menu .bar-img {
-      padding-bottom: 45px;
       text-align: center;
+      padding-bottom: 45px;
       margin-bottom: 25px;
       border-bottom: 1px solid #ffffff; }
     .wrapper .tab-menu .bar-new {
@@ -233,6 +233,7 @@ hr {
         font-size: 1.1rem;
         text-align: center; }
       .wrapper .tab-menu .bar-new .item-new {
+        padding-bottom: 15px;
         margin: 20px 0;
         font-size: 1rem;
         border-bottom: 1px solid #ffffff; }
@@ -240,16 +241,17 @@ hr {
     position: relative; }
     @media only screen and (min-width: 641px) {
       .wrapper .page01-content {
-        width: calc(100vw - 17.5%); } }
+        width: calc(100vw - 19%); } }
     .wrapper .page01-content .scrollTopMenu {
       position: fixed;
       top: 0;
       z-index: 99;
       background: #fff;
-      width: 100vw; }
+      width: 100vw;
+      padding-bottom: 15px; }
       @media only screen and (min-width: 641px) {
         .wrapper .page01-content .scrollTopMenu {
-          width: calc(100vw - 17.5%); } }
+          width: calc(100vw - 19%); } }
   .wrapper .banner {
     position: relative;
     height: 250px;
@@ -310,9 +312,6 @@ hr {
     width: 95%;
     padding-bottom: 15px;
     border: 1px solid #000000; }
-    @media only screen and (min-width: 641px) {
-      .wrapper .topics-slider .menu-slider {
-        width: 85%; } }
     .wrapper .topics-slider .menu-slider a {
       color: #fff; }
     .wrapper .topics-slider .menu-slider .item-menu {

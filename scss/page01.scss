@@ -84,14 +84,13 @@ hr {
       .search-header {
         float: right;
         margin-top: 20px;
-        input {
-          width: 200px;
-          background-color: #999999;
-          padding: 3px;
-          border-radius: 3px;
-          outline: none;
-          border: 1px solid #999999;
-        }
+        width: 200px;
+        background-color: #999999;
+        padding: 3px;
+        border-radius: 3px;
+        outline: none;
+        border: 1px solid #999999;
+
       }
     }
     img {
@@ -116,39 +115,37 @@ hr {
     color: #000;
     width: 17.5%;
     .bar-home {
-      ul {
-        li {
-          list-style: none;
-          font-size: 1.1rem;
-          margin-bottom: 20px;
-          display: table;
-          position: relative;
-          overflow:hidden;
+      li {
+        list-style: none;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        display: table;
+        position: relative;
+        overflow:hidden;
+        .line {
+          width: 7px;
+          height: 1px;
+          background-color: red;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          @include css3-prefix(transition,1s);
+        }
+        &:hover {
           .line {
-            width: 7px;
-            height: 1px;
-            background-color: red;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            @include css3-prefix(transition,1s);
-          }
-          &:hover {
-            .line {
-              width: 100px;
-            }
-            a {
-              font-weight: bold;
-            }
+            width: 100px;
           }
           a {
-            color: #000;
-            text-decoration: none;
+            font-weight: bold;
           }
-          &.bar-title {
-            a {
-              border-bottom: 1px solid red;
-            }
+        }
+        a {
+          color: #000;
+          text-decoration: none;
+        }
+        &.bar-title {
+          a {
+            border-bottom: 1px solid red;
           }
         }
       }
@@ -169,7 +166,8 @@ hr {
       }
     }
     .bar-img {
-      margin: 60px 30px;
+      text-align: center;
+      margin: 60px 0;
     }
     .bar-new {
       color: #000;
@@ -180,6 +178,7 @@ hr {
         font-weight: 700;
       }
       .item-new {
+        padding-bottom: 15px;
         margin: 20px 0;
         font-size: 1rem;
         border-bottom: 1px solid #000;
@@ -209,38 +208,36 @@ hr {
       padding-bottom: 35px;
       margin-bottom: 15px;
       border-bottom: 1px solid #ffffff;
-      ul {
-        margin-top: 35px;
-        li {
-          position: relative;
-          list-style: none;
-          font-size: 1.2rem;
-          margin-bottom: 25px;
-          padding-bottom: 5px;
-          &:hover {
-            .line {
-              background-color: transparent;
-              border-bottom: 1px solid #FA2908;
-            }
-          }
-          a {
-            text-decoration: none;
-            color: #fff;
-            padding-bottom: 4px;
-            &.home-menu-title {
-              font-size: 1.3rem;
-              border-bottom: 1px solid #FA2908;
-            }
-          }
+      margin-top: 35px;
+      li {
+        position: relative;
+        list-style: none;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-bottom: 5px;
+        &:hover {
           .line {
-            height: 1px;
-            width: 10px;
-            background-color: #FA2908;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            @include css3-prefix(transform, translateX(-50%));
+            background-color: transparent;
+            border-bottom: 1px solid #FA2908;
           }
+        }
+        a {
+          text-decoration: none;
+          color: #fff;
+          padding-bottom: 4px;
+          &.home-menu-title {
+            font-size: 1.3rem;
+            border-bottom: 1px solid #FA2908;
+          }
+        }
+        .line {
+          height: 1px;
+          width: 10px;
+          background-color: #FA2908;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          @include css3-prefix(transform, translateX(-50%));
         }
       }
     }
@@ -262,8 +259,8 @@ hr {
       }
     }
     .bar-img {
-      padding-bottom: 45px;
       text-align: center;
+      padding-bottom: 45px;
       margin-bottom: 25px;
       border-bottom: 1px solid #ffffff;
     }
@@ -275,6 +272,7 @@ hr {
         text-align: center;
       }
       .item-new {
+        padding-bottom: 15px;
         margin: 20px 0;
         font-size: 1rem;
         border-bottom: 1px solid #ffffff;
@@ -284,7 +282,7 @@ hr {
   .page01-content {
     position: relative;
     @include bp-tablet-vertical() {
-      width: calc(100vw - 17.5%);
+      width: calc(100vw - 19%);
     }
     .scrollTopMenu {
       position: fixed;
@@ -292,8 +290,9 @@ hr {
       z-index: 99;
       background: #fff;
       width: 100vw;
+      padding-bottom: 15px;
       @include bp-tablet-vertical() {
-        width: calc(100vw - 17.5%);
+        width: calc(100vw - 19%);
       }
     }
   }
@@ -365,9 +364,6 @@ hr {
       width: 95%;
       padding-bottom: 15px;
       border: 1px solid #000000;
-      @include bp-tablet-vertical() {
-        width: 85%;
-      }
       a {
         color: #fff;
       }

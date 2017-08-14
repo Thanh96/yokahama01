@@ -263,38 +263,37 @@ hr {
       text-align: center;
       padding-bottom: 35px;
       margin-bottom: 15px;
-      border-bottom: 1px solid #ffffff; }
-      .wrapper .tab-menu .home-menu ul {
-        margin-top: 35px; }
-        .wrapper .tab-menu .home-menu ul li {
-          position: relative;
-          list-style: none;
-          font-size: 1.2rem;
-          margin-bottom: 25px;
-          padding-bottom: 5px; }
-          .wrapper .tab-menu .home-menu ul li:hover .line {
-            background-color: transparent;
+      border-bottom: 1px solid #ffffff;
+      margin-top: 35px; }
+      .wrapper .tab-menu .home-menu li {
+        position: relative;
+        list-style: none;
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+        padding-bottom: 5px; }
+        .wrapper .tab-menu .home-menu li:hover .line {
+          background-color: transparent;
+          border-bottom: 1px solid #FA2908; }
+        .wrapper .tab-menu .home-menu li a {
+          text-decoration: none;
+          color: #fff;
+          padding-bottom: 4px; }
+          .wrapper .tab-menu .home-menu li a.home-menu-title {
+            font-size: 1.3rem;
             border-bottom: 1px solid #FA2908; }
-          .wrapper .tab-menu .home-menu ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding-bottom: 4px; }
-            .wrapper .tab-menu .home-menu ul li a.home-menu-title {
-              font-size: 1.3rem;
-              border-bottom: 1px solid #FA2908; }
-          .wrapper .tab-menu .home-menu ul li .line {
-            height: 1px;
-            width: 10px;
-            background-color: #FA2908;
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            -khtml-transform: translateX(-50%);
-            -moz-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            -o-transform: translateX(-50%);
-            transform: translateX(-50%); }
+        .wrapper .tab-menu .home-menu li .line {
+          height: 1px;
+          width: 10px;
+          background-color: #FA2908;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          -webkit-transform: translateX(-50%);
+          -khtml-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%); }
     .wrapper .tab-menu .special-movie {
       padding: 0 60px;
       padding-bottom: 35px;
@@ -367,14 +366,14 @@ hr {
     @media only screen and (min-width: 641px) {
       .wrapper .nav-bar {
         display: block; } }
-    .wrapper .nav-bar .bar-home ul li {
+    .wrapper .nav-bar .bar-home li {
       list-style: none;
       font-size: 1.1rem;
       margin-bottom: 20px;
       display: table;
       position: relative;
       overflow: hidden; }
-      .wrapper .nav-bar .bar-home ul li .line {
+      .wrapper .nav-bar .bar-home li .line {
         width: 7px;
         height: 1px;
         background-color: red;
@@ -387,14 +386,14 @@ hr {
         -ms-transition: 1s;
         -o-transition: 1s;
         transition: 1s; }
-      .wrapper .nav-bar .bar-home ul li:hover .line {
+      .wrapper .nav-bar .bar-home li:hover .line {
         width: 100px; }
-      .wrapper .nav-bar .bar-home ul li:hover a {
+      .wrapper .nav-bar .bar-home li:hover a {
         font-weight: bold; }
-      .wrapper .nav-bar .bar-home ul li a {
+      .wrapper .nav-bar .bar-home li a {
         color: #ffffff;
         text-decoration: none; }
-      .wrapper .nav-bar .bar-home ul li.bar-title a {
+      .wrapper .nav-bar .bar-home li.bar-title a {
         border-bottom: 1px solid red; }
     .wrapper .nav-bar .bar-special {
       font-family: "Century Gothic";
@@ -408,7 +407,8 @@ hr {
         height: 100px;
         border: 1px solid #ffffff; }
     .wrapper .nav-bar .bar-img {
-      margin: 60px 30px; }
+      margin: 60px 0;
+      text-align: center; }
     .wrapper .nav-bar .bar-new {
       margin: 0 30px; }
       .wrapper .nav-bar .bar-new h1 {
