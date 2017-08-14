@@ -1,0 +1,72 @@
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property} : #{$value};
+  -moz-#{$property}   : #{$value};
+  -ms-#{$property}    : #{$value};
+  -o-#{$property}     : #{$value};
+  #{$property}        : #{$value};
+}
+
+@mixin center-inside-element() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include css3-prefix('transform', 'translate(-50%, -50%)');
+}
+@mixin flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+/// Media-query Breakpoints
+
+@mixin bp-ip4 {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6 {
+  @media only screen and (min-width: 321px) {
+    @content;
+  }
+}
+
+@mixin bp-ip6-plus {
+  @media only screen and (min-width: 376px) and (max-width: 414px) {
+    @content;
+  }
+}
+
+@mixin bp-tablet-vertical {
+  @media only screen and (min-width: 641px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-sm {
+  @media only screen and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-md {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-lg {
+  @media only screen and (min-width: 1367px) {
+    @content;
+  }
+}
+
+@mixin bp-desktop-ultra {
+  @media only screen and (min-width: 1441px) {
+    @content;
+  }
+}
+
