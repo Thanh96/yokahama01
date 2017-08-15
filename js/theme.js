@@ -43,17 +43,7 @@ $(document).ready(function () {
     $(".menu-slider").slideToggle("slow");
   });
   // scroll menu top
-  var menuScroll = $(".topics-slider");
-  $(window).scroll(function() {
-    if ($(this).scrollTop() > 325) {
-      menuScroll.addClass("scrollTopMenu");
-      $(".detail-part-info").css("margin-top","50px");
-    }
-    else {
-      menuScroll.removeClass("scrollTopMenu");
-      $(".detail-part-info").css("margin-top","0px");
-    }
-  });
+
   //
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -114,4 +104,57 @@ $(document).ready(function () {
   }
 });
 $(window).resize(function () {
+  var device = $("html, body").width();
+  if(device > 415) {
+    var widthContent = $(".slider").width();
+    var widthNav = $(".nav-bar").width();
+    var heightHeader = $(".header").outerHeight();
+    var widthSlider = widthContent - widthNav - 500;
+    var heightContent = $(".slider").height();
+    var heightSlider = heightContent - 500 - heightHeader;
+    var topLogo = heightSlider/2 + heightHeader;
+    var leftLogo = widthSlider/2;
+    $(".content-bg").css("top",topLogo);
+    $(".content-bg").css("left",leftLogo);
+    var heightDevice = $(window).height();
+    var Header = $(".header").outerHeight();
+    var heightFooter = $(".footer-phone").outerHeight();
+    var heightIndex = $(".contentPage").outerHeight();
+    var heightNewContent = heightDevice - heightFooter;
+    var heightLogo = $(".content-bg").outerHeight();
+    if( heightDevice > heightIndex + heightFooter + Header) {
+      $(".contentPage").height(heightNewContent);
+      if(device < 415) {
+        var paddingLogo1 = (heightNewContent - heightLogo - Header)/2 + Header;
+        $(".content-bg").css("margin-top",paddingLogo1);
+      }
+    }
+    else {
+      if(device < 415)
+      {
+        var paddingLogo2 = (heightIndex - heightLogo )/2 + Header;
+        $(".content-bg").css("margin-top",paddingLogo2);
+        console.log(heightIndex);
+      }
+    }
+  }
+
+});
+$(window).scroll(function() {
+  var menuScroll = $(".topics-slider");
+  if ($(this).scrollTop() > 325) {
+    menuScroll.addClass("scrollTopMenu");
+    $(".detail-part-info").css("margin-top","50px");
+  }
+  else {
+    menuScroll.removeClass("scrollTopMenu");
+    $(".detail-part-info").css("margin-top","0px");
+  }
+  var navScroll = $(".nav-bar");
+  if($(this).scrollTop() > 75) {
+    navScroll.addClass("nav-scroll");
+  }
+  else {
+    navScroll.removeClass("nav-scroll");
+  }
 });
