@@ -41,10 +41,18 @@ $(document).ready(function () {
   // topics page01
   $(".topics").click(function () {
     $(".menu-slider").slideToggle("slow");
+    var menuShow = $(".topics-slider").height();
+    console.log(menuShow);
+    var menuCss = $(".menu-slider").height();
+    var menuScroll = $(window).scrollTop();
+    if(menuScroll > 325) {
+      if(menuCss === 0) {
+        $(".content-page-02").css("margin-top","300px");
+      } else {
+        $(".content-page-02").css("margin-top","80px");
+      }
+    }
   });
-  // scroll menu top
-
-  //
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
       .not('[href="#"]')
@@ -99,7 +107,6 @@ $(document).ready(function () {
     {
       var paddingLogo2 = (heightIndex - heightLogo )/2 + Header;
       $(".content-bg").css("margin-top",paddingLogo2);
-      console.log(heightIndex);
     }
   }
 });
@@ -130,11 +137,9 @@ $(window).resize(function () {
       }
     }
     else {
-      if(device < 415)
-      {
+      if(device < 415) {
         var paddingLogo2 = (heightIndex - heightLogo )/2 + Header;
         $(".content-bg").css("margin-top",paddingLogo2);
-        console.log(heightIndex);
       }
     }
   }
@@ -144,11 +149,17 @@ $(window).scroll(function() {
   var menuScroll = $(".topics-slider");
   if ($(this).scrollTop() > 325) {
     menuScroll.addClass("scrollTopMenu");
-    $(".content").css("margin-top","95px");
+    var menuCss = $(".menu-slider").css("display");
+    console.log(menuScroll.height());
+    if(menuCss === "block") {
+      $(".content-page-02").css("margin-top",menuScroll.height());
+    } else {
+      $(".content-page-02").css("margin-top",menuScroll.height());
+    }
   }
   else {
     menuScroll.removeClass("scrollTopMenu");
-    $(".content").css("margin-top","0px");
+    $(".content-page-02").css("margin-top","0px");
   }
   var navScroll = $(".nav-bar");
   if($(this).scrollTop() > 75) {

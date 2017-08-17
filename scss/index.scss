@@ -575,8 +575,8 @@ hr {
       background-color: #9999A6;
       position: absolute;
       left: -10px;
-      transform: rotate(-30deg);
-      transition: .5s;
+      @include css3-prefix(transform,rotate(-30deg));
+      @include css3-prefix(transition,.5s);
     }
     &:hover {
       &:before {

@@ -249,11 +249,7 @@ hr {
       top: 0;
       z-index: 99;
       background: #fff;
-      width: 100vw;
       padding-bottom: 15px; }
-      @media only screen and (min-width: 641px) {
-        .wrapper .page01-content .scrollTopMenu {
-          width: calc(100% - 17%); } }
   .wrapper .banner {
     position: relative;
     height: 250px;
@@ -292,6 +288,13 @@ hr {
     @media only screen and (min-width: 1025px) {
       .wrapper .container-page-02 {
         width: 730px; } }
+  .wrapper .content-page-02 {
+    -webkit-transition: 1s;
+    -khtml-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
   .wrapper .topics-slider .topics {
     font-weight: 700;
     font-family: "Century Gothic";
@@ -350,7 +353,12 @@ hr {
       .wrapper .topics-slider .item-select li a {
         color: #555555;
         text-decoration: none;
-        transition: .5s;
+        -webkit-transition: 0.5s;
+        -khtml-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
         font-weight: bold; }
         .wrapper .topics-slider .item-select li a:focus {
           color: #000;
@@ -496,6 +504,7 @@ hr {
     display: none;
     position: relative;
     z-index: 9;
+    width: 100%;
     height: 55px;
     background-color: #000;
     color: #fff;

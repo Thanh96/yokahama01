@@ -487,8 +487,18 @@ hr {
       background-color: #9999A6;
       position: absolute;
       left: -10px;
+      -webkit-transform: rotate(-30deg);
+      -khtml-transform: rotate(-30deg);
+      -moz-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+      -o-transform: rotate(-30deg);
       transform: rotate(-30deg);
-      transition: .5s; }
+      -webkit-transition: 0.5s;
+      -khtml-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -ms-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
     .wrapper .label-bg:hover:before {
       left: 500px; }
 
