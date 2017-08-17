@@ -45,11 +45,30 @@ $(document).ready(function () {
     console.log(menuShow);
     var menuCss = $(".menu-slider").height();
     var menuScroll = $(window).scrollTop();
-    if(menuScroll > 325) {
-      if(menuCss === 0) {
-        $(".content-page-02").css("margin-top","300px");
-      } else {
-        $(".content-page-02").css("margin-top","80px");
+    if(device >= 415) {
+      if(menuScroll > 325) {
+        if(menuCss === 0) {
+          $(".content-page-02").css("margin-top","300px");
+          $(".content-page-02").animate({
+            marginTop: "300px" },800);
+        } else {
+          $(".content-page-02").css("margin-top","80px");
+          $(".content-page-02").animate({
+            marginTop: "80px" },800);
+        }
+      }
+    }
+    if(device < 415) {
+      if(menuScroll > 325) {
+        if(menuCss === 0) {
+          $(".content-page-02").css("margin-top","395px");
+          $(".content-page-02").animate({
+            marginTop: "395px" },800);
+        } else {
+          $(".content-page-02").css("margin-top","80px");
+          $(".content-page-02").animate({
+            marginTop: "80px" },800);
+        }
       }
     }
   });
@@ -147,19 +166,27 @@ $(window).resize(function () {
 });
 $(window).scroll(function() {
   var menuScroll = $(".topics-slider");
-  if ($(this).scrollTop() > 325) {
-    menuScroll.addClass("scrollTopMenu");
-    var menuCss = $(".menu-slider").css("display");
-    console.log(menuScroll.height());
-    if(menuCss === "block") {
-      $(".content-page-02").css("margin-top",menuScroll.height());
-    } else {
-      $(".content-page-02").css("margin-top",menuScroll.height());
+  var device = $("html, body").width();
+  if(device >= 415) {
+    if ($(this).scrollTop() > 325) {
+      menuScroll.addClass("scrollTopMenu");
+      $(".content-page-02").css("margin-top", "82px");
+    }
+    else {
+      menuScroll.removeClass("scrollTopMenu");
+      $(".content-page-02").css("margin-top", "0px");
     }
   }
-  else {
-    menuScroll.removeClass("scrollTopMenu");
-    $(".content-page-02").css("margin-top","0px");
+  if(device < 415) {
+    if ($(this).scrollTop() > 200) {
+      console.log(device);
+      menuScroll.addClass("scrollTopMenu");
+      $(".content-page-02").css("margin-top", "80px");
+    }
+    else {
+      menuScroll.removeClass("scrollTopMenu");
+      $(".content-page-02").css("margin-top", "0px");
+    }
   }
   var navScroll = $(".nav-bar");
   if($(this).scrollTop() > 75) {

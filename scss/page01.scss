@@ -289,11 +289,14 @@ hr {
     }
     .scrollTopMenu {
       position: fixed;
-      top: 0;
+      top: 45px;
       z-index: 99;
       background: #fff;
       padding-bottom: 15px;
+      @include bp-tablet-vertical() {
+        top: 0;
 
+      }
     }
   }
   .banner {
@@ -339,9 +342,6 @@ hr {
       width: 730px;
     }
   }
-  .content-page-02 {
-    @include css3-prefix(transition,1s);
-  }
   .topics-slider {
     .topics {
       font-weight: 700;
@@ -367,6 +367,11 @@ hr {
       width: 95%;
       padding-bottom: 15px;
       border: 1px solid #000000;
+      height: 300px;
+      overflow-y: scroll;
+      @include bp-tablet-vertical() {
+        height: auto;
+        overflow-y: hidden; }
       a {
         color: #fff;
       }
