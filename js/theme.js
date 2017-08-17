@@ -144,11 +144,11 @@ $(window).scroll(function() {
   var menuScroll = $(".topics-slider");
   if ($(this).scrollTop() > 325) {
     menuScroll.addClass("scrollTopMenu");
-    $(".detail-part-info").css("margin-top","50px");
+    $(".content").css("margin-top","95px");
   }
   else {
     menuScroll.removeClass("scrollTopMenu");
-    $(".detail-part-info").css("margin-top","0px");
+    $(".content").css("margin-top","0px");
   }
   var navScroll = $(".nav-bar");
   if($(this).scrollTop() > 75) {
