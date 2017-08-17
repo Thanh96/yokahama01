@@ -379,13 +379,13 @@ hr {
     display: none;
     position: relative;
     z-index: 9;
-    @include bp-tablet-vertical() {
-      display: block;
-    }
     height: 55px;
     background-color: #000;
     color: #fff;
     line-height: 50px;
+    @include bp-tablet-vertical() {
+      display: block;
+    }
     ul {
       li {
         display: inline-table;
@@ -410,9 +410,6 @@ hr {
     display: none;
     overflow-y: scroll;
     overflow-x: hidden;
-    @include bp-tablet-vertical() {
-      display: block;
-    }
     position: absolute;
     right: 0;
     top: 70px;
@@ -421,6 +418,9 @@ hr {
     color: #fff;
     width: 17.5%;
     height: calc(100vh - 55px);
+    @include bp-tablet-vertical() {
+      display: block;
+    }
     .bar-home {
       li {
         list-style: none;
@@ -498,11 +498,11 @@ hr {
     display: block;
     position: relative;
     z-index: 9;
+    font-size: 1rem;
+    color: #898989;
     @include bp-tablet-vertical () {
       display: none;
     }
-    font-size: 1rem;
-    color: #898989;
     h1 {
       color: #000;
       font-size: 1.3rem;
