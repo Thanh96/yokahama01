@@ -102,6 +102,7 @@ hr {
   }
   .nav-bar {
     z-index:9;
+    overflow-x: hidden;
     overflow-y: scroll;
     padding-top: 10px;
     display: none;
@@ -293,9 +294,13 @@ hr {
       z-index: 99;
       background: #fff;
       padding-bottom: 15px;
+      left: 0;
+      width: 100%;
       @include bp-tablet-vertical() {
+        width: auto;
         top: 0;
-
+        left: auto;
+        text-align: center;
       }
     }
   }
@@ -338,10 +343,19 @@ hr {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
+    @include bp-tablet-vertical() {
+      width: 570px;
+    }
+    @include bp-desktop-sm() {
+        width: 650px;
+    }
     @include bp-desktop-md() {
-      width: 730px;
+      width: 780px;
     }
   }
+  //.page01-content {
+  //  @include css3-prefix(transition,.6s);
+  //}
   .topics-slider {
     .topics {
       font-weight: 700;
@@ -351,10 +365,11 @@ hr {
       text-align: center;
       background-color: #000000;
       color: #ffffff;
-      font-size: 1.2rem;
+      font-size: 1em;
       margin: auto;
       @include bp-tablet-vertical() {
         width: 20%;
+        font-size: 1.2rem;
       }
       img {
         margin-right: 10px;
@@ -398,12 +413,13 @@ hr {
       }
       li {
         list-style: none;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-family: "Yu Gothic";
         display: inline-table;
         padding: 0 10px;
         @include bp-tablet-vertical() {
           padding: 0 25px;
+          font-size: 1.3rem;
         }
         a {
           color: #555555;
@@ -468,9 +484,12 @@ hr {
       float: left;
       width: 110px;
       @include bp-tablet-vertical() {
-        width: 230px;
+        width: 210px;
       }
       @include bp-desktop-sm() {
+        width: 250px;
+      }
+      @include bp-desktop-md() {
         width: 300px;
       }
     }
@@ -478,9 +497,12 @@ hr {
       float: right;
       width: 110px;
       @include bp-tablet-vertical() {
-        width: 230px;
+        width: 210px;
       }
       @include bp-desktop-sm() {
+        width: 250px;
+      }
+      @include bp-desktop-md() {
         width: 300px;
       }
     }
