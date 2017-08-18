@@ -26,6 +26,7 @@ $(document).ready(function () {
 
     // tính vi tri cho logo\
     var device = $("html, body").width();
+
     if (device > 415) {
         var widthContent = $(".slider").width();
         var widthNav = $(".nav-bar").width();
@@ -38,6 +39,7 @@ $(document).ready(function () {
         $(".content-bg").css("top", topLogo);
         $(".content-bg").css("left", leftLogo);
     }
+
     $(".topics").click(function () {
         $(".menu-slider").slideToggle(600);
 

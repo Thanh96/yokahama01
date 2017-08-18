@@ -1,4 +1,5 @@
 @import "mixin";
+
 html, body {
   position: relative;
   -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -12,13 +13,16 @@ html, body {
     }
   }
 }
+
 ul {
   margin: 0;
   padding: 0;
 }
+
 hr {
   margin: 0;
 }
+
 .wrapper {
   font-family: "Yu Gothic";
   .header {
@@ -100,6 +104,7 @@ hr {
       }
     }
   }
+
   .nav-bar {
     z-index:9;
     overflow-x: hidden;
@@ -192,6 +197,7 @@ hr {
       }
     }
   }
+
   .tab-menu {
     padding-top: 15px;
     display:none;
@@ -283,6 +289,7 @@ hr {
       }
     }
   }
+
   .page01-content {
     position: relative;
     @include bp-tablet-vertical() {
@@ -303,6 +310,7 @@ hr {
       }
     }
   }
+
   .banner {
     position: relative;
     height: 250px;
@@ -337,6 +345,7 @@ hr {
       }
     }
   }
+
   .container-page-02 {
     margin-right: auto;
     margin-left: auto;
@@ -352,9 +361,7 @@ hr {
       width: 780px;
     }
   }
-  //.page01-content {
-  //  @include css3-prefix(transition,.6s);
-  //}
+
   .topics-slider {
     padding-bottom: 30px;
     .topics {
@@ -465,6 +472,7 @@ hr {
       color: #000;
     }
   }
+
   .part-content {
     position: relative;
     div {
@@ -596,6 +604,7 @@ hr {
       }
     }
   }
+
   .footer {
     font-family: 'Open Sans', sans-serif;
     display: none;
@@ -627,6 +636,7 @@ hr {
       font-size: .8rem;
     }
   }
+
   .footer-phone {
     border: 1px solid #9999A6;
     font-family: 'Open Sans', sans-serif;
@@ -657,6 +667,7 @@ hr {
       margin-top: 30px;
     }
   }
+
   .gird {
     background: url("../img/img-05.png") top right;
     height: 100%;
@@ -666,6 +677,7 @@ hr {
     left: 0;
     z-index: 8;
   }
+
   .video-slider {
     button {
       display: none;
