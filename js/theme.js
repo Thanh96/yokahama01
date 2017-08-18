@@ -2,7 +2,7 @@ $(document).ready(function () {
   // show menu phone
   $(".menu-header-phone img").click(function () {
     var show = $(".menu-header-phone").css("margin-top");
-    $(".tab-menu").slideToggle("slow");
+    $(".tab-menu").slideToggle(600);
     if( show == "-29px" )
     {
       $(".menu-header-phone").css("margin-top","10px");
@@ -24,7 +24,7 @@ $(document).ready(function () {
     autoplay: true
   });
   // end video play
-  // tính vi tri cho logo
+  // tính vi tri cho logo\
   var device = $("html, body").width();
   if(device > 415) {
     var widthContent = $(".slider").width();
@@ -38,39 +38,32 @@ $(document).ready(function () {
     $(".content-bg").css("top",topLogo);
     $(".content-bg").css("left",leftLogo);
   }
-  // topics page01
   $(".topics").click(function () {
-    $(".menu-slider").slideToggle("slow");
-    var menuShow = $(".topics-slider").height();
-    console.log(menuShow);
-    var menuCss = $(".menu-slider").height();
+    var margin_top = "0px";
+    $(".menu-slider").slideToggle(600);
+    var menuCss = $(".topics-slider").height();
     var menuScroll = $(window).scrollTop();
     if(device >= 415) {
       if(menuScroll > 325) {
-        if(menuCss === 0) {
-          $(".content-page-02").css("margin-top","300px");
-          $(".content-page-02").animate({
-            marginTop: "300px" },800);
+        if(menuCss  < 100) {
+          margin_top = "300px";
         } else {
-          $(".content-page-02").css("margin-top","80px");
-          $(".content-page-02").animate({
-            marginTop: "80px" },800);
+          margin_top = "80px";
         }
       }
     }
     if(device < 415) {
-      if(menuScroll > 325) {
-        if(menuCss === 0) {
-          $(".content-page-02").css("margin-top","395px");
-          $(".content-page-02").animate({
-            marginTop: "395px" },800);
+      if(menuScroll > 200) {
+        if(menuCss < 100) {
+          margin_top = "395px"
         } else {
-          $(".content-page-02").css("margin-top","80px");
-          $(".content-page-02").animate({
-            marginTop: "80px" },800);
+          margin_top = "95px;"
         }
       }
     }
+    $(".content-page-02").animate({
+      marginTop: margin_top },600);
+    console.log(margin_top);
   });
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -128,6 +121,51 @@ $(document).ready(function () {
       $(".content-bg").css("margin-top",paddingLogo2);
     }
   }
+  $(window).scroll(function() {
+    var menuScroll = $(".topics-slider");
+    var device = $("html, body").width();
+    var menuCss = $(".topics-slider").height();
+    if(device >= 415) {
+      if ($(this).scrollTop() > 325) {
+        menuScroll.addClass("scrollTopMenu");
+        menuScroll.next()
+        if(menuCss  > 100) {
+          margin_top = "300px";
+        } else {
+          margin_top = "80px";
+        }
+      }
+      else {
+        menuScroll.removeClass("scrollTopMenu");
+        margin_top = "0px";
+      }
+    }
+    if(device < 415) {
+      if ($(this).scrollTop() > 200) {
+        menuScroll.addClass("scrollTopMenu");
+        if(menuCss > 100) {
+          margin_top = "395px"
+        } else {
+          margin_top = "95px;"
+        }
+      }
+      else {
+        menuScroll.removeClass("scrollTopMenu");
+        margin_top = "0px";
+      }
+    }
+    $(".content-page-02").animate({
+      marginTop: margin_top },600);
+    console.log(margin_top);
+    var navScroll = $(".nav-bar");
+    if($(this).scrollTop() > 75) {
+      navScroll.addClass("nav-scroll");
+    }
+    else {
+      navScroll.removeClass("nav-scroll");
+    }
+  });
+
 });
 $(window).resize(function () {
   var device = $("html, body").width();
@@ -163,36 +201,4 @@ $(window).resize(function () {
     }
   }
 
-});
-$(window).scroll(function() {
-  var menuScroll = $(".topics-slider");
-  var device = $("html, body").width();
-  if(device >= 415) {
-    if ($(this).scrollTop() > 325) {
-      menuScroll.addClass("scrollTopMenu");
-      $(".content-page-02").css("margin-top", "82px");
-    }
-    else {
-      menuScroll.removeClass("scrollTopMenu");
-      $(".content-page-02").css("margin-top", "0px");
-    }
-  }
-  if(device < 415) {
-    if ($(this).scrollTop() > 200) {
-      console.log(device);
-      menuScroll.addClass("scrollTopMenu");
-      $(".content-page-02").css("margin-top", "80px");
-    }
-    else {
-      menuScroll.removeClass("scrollTopMenu");
-      $(".content-page-02").css("margin-top", "0px");
-    }
-  }
-  var navScroll = $(".nav-bar");
-  if($(this).scrollTop() > 75) {
-    navScroll.addClass("nav-scroll");
-  }
-  else {
-    navScroll.removeClass("nav-scroll");
-  }
 });
