@@ -51,44 +51,23 @@ $(document).ready(function () {
 
             if($(window).width() > 767) {
                 if(menuScroll.height() > 100) {
-                    marginTop = 120;
+                    marginTop = 110;
                 } else {
                     marginTop = 322;
                 }
+            }
+            else {
+              if(menuScroll.height() > 100) {
+                marginTop = 101;
+              } else {
+                marginTop = 401;
+              }
             }
 
             contentScroll.animate({
                 marginTop: marginTop
             }, 600);
         }
-
-
-
-
-        // var menuCss = $(".topics-slider").height();
-        // var menuScroll = $(window).scrollTop();
-        // if (device >= 415) {
-        //     if (menuScroll > 325) {
-        //         if (menuCss < 100) {
-        //             margin_top = "300px";
-        //         } else {
-        //             margin_top = "80px";
-        //         }
-        //     }
-        // }
-        // if (device < 415) {
-        //     if (menuScroll > 200) {
-        //         if (menuCss < 100) {
-        //             margin_top = "395px"
-        //         } else {
-        //             margin_top = "95px;"
-        //         }
-        //     }
-        // }
-        // $(".content-page-02").animate({
-        //     marginTop: margin_top
-        // }, 600);
-        // console.log(margin_top);
     });
 
     $('a[href*="#"]')
@@ -135,14 +114,14 @@ $(document).ready(function () {
     var heightIndex = $(".contentPage").outerHeight();
     var heightNewContent = heightDevice - heightFooter;
     var heightLogo = $(".content-bg").outerHeight();
+
     if (heightDevice > heightIndex + heightFooter + Header) {
         $(".contentPage").height(heightNewContent);
         if (device < 415) {
             var paddingLogo1 = (heightNewContent - heightLogo - Header) / 2 + Header;
             $(".content-bg").css("margin-top", paddingLogo1);
         }
-    }
-    else {
+    } else {
         if (device < 415) {
             var paddingLogo2 = (heightIndex - heightLogo ) / 2 + Header;
             $(".content-bg").css("margin-top", paddingLogo2);
@@ -152,22 +131,25 @@ $(document).ready(function () {
     var menuScroll = $(".topics-slider");
     var fixmeTop = menuScroll.offset().top;
     var contentScroll = $(".content-page-02");
-    $(window).scroll(function () {
 
+    $(window).scroll(function () {
 
         var currentScroll = $(window).scrollTop();
         var marginTop;
 
         if($(window).width() > 767) {
             if(menuScroll.height() < 100) {
-                marginTop = 120;
+                marginTop =  110;
             } else {
                 marginTop = 322;
             }
         } else {
-
+            if(menuScroll.height() > 100) {
+              marginTop = 401;
+            } else {
+              marginTop = 101;
+            }
         }
-
 
         if (currentScroll >= fixmeTop) {           // apply position: fixed if you
             menuScroll.addClass("scrollTopMenu");
@@ -176,54 +158,11 @@ $(document).ready(function () {
             menuScroll.removeClass("scrollTopMenu");
             contentScroll.css("margin-top", 0);
         }
-
-
-        // var device = $("html, body").width();
-        // var menuCss = $(".topics-slider").height();
-        // if (device >= 415) {
-        //     if ($(this).scrollTop() > 325) {
-        //         menuScroll.addClass("scrollTopMenu");
-        //         if (menuCss > 100) {
-        //             margin_top = "300px";
-        //         } else {
-        //             margin_top = "80px";
-        //         }
-        //     }
-        //     else {
-        //         menuScroll.removeClass("scrollTopMenu");
-        //         margin_top = "0px";
-        //     }
-        // }
-        // if (device < 415) {
-        //     if ($(this).scrollTop() > 200) {
-        //         menuScroll.addClass("scrollTopMenu");
-        //         if (menuCss > 100) {
-        //             margin_top = "395px"
-        //         } else {
-        //             margin_top = "95px;"
-        //         }
-        //     }
-        //     else {
-        //         menuScroll.removeClass("scrollTopMenu");
-        //         margin_top = "0px";
-        //     }
-        // }
-        // $(".content-page-02").animate({
-        //     marginTop: margin_top
-        // }, 600);
-        // console.log(margin_top);
-        //
-        // var navScroll = $(".nav-bar");
-        // if ($(this).scrollTop() > 75) {
-        //     navScroll.addClass("nav-scroll");
-        // }
-        // else {
-        //     navScroll.removeClass("nav-scroll");
-        // }
     });
 });
 $(window).resize(function () {
     var device = $("html, body").width();
+
     if (device > 415) {
         var widthContent = $(".slider").width();
         var widthNav = $(".nav-bar").width();
@@ -233,22 +172,25 @@ $(window).resize(function () {
         var heightSlider = heightContent - 500 - heightHeader;
         var topLogo = heightSlider / 2 + heightHeader;
         var leftLogo = widthSlider / 2;
+
         $(".content-bg").css("top", topLogo);
         $(".content-bg").css("left", leftLogo);
         var heightDevice = $(window).height();
         var Header = $(".header").outerHeight();
+
         var heightFooter = $(".footer-phone").outerHeight();
         var heightIndex = $(".contentPage").outerHeight();
         var heightNewContent = heightDevice - heightFooter;
         var heightLogo = $(".content-bg").outerHeight();
+
         if (heightDevice > heightIndex + heightFooter + Header) {
             $(".contentPage").height(heightNewContent);
+
             if (device < 415) {
                 var paddingLogo1 = (heightNewContent - heightLogo - Header) / 2 + Header;
                 $(".content-bg").css("margin-top", paddingLogo1);
             }
-        }
-        else {
+        } else {
             if (device < 415) {
                 var paddingLogo2 = (heightIndex - heightLogo ) / 2 + Header;
                 $(".content-bg").css("margin-top", paddingLogo2);

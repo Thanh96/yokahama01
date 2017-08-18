@@ -300,7 +300,6 @@ hr {
         width: auto;
         top: 0;
         left: auto;
-        text-align: center;
       }
     }
   }
@@ -357,6 +356,7 @@ hr {
   //  @include css3-prefix(transition,.6s);
   //}
   .topics-slider {
+    padding-bottom: 30px;
     .topics {
       font-weight: 700;
       font-family: "Century Gothic";
@@ -379,8 +379,7 @@ hr {
       display: none;
       color: #ffffff;
       background-color: #000000;
-      width: 95%;
-      padding-bottom: 15px;
+      padding: 0 20px 20px 20px;
       border: 1px solid #000000;
       height: 300px;
       overflow-y: scroll;
@@ -455,7 +454,6 @@ hr {
     line-height: 27px;
     padding: 10px 0;
     width: 100%;
-    margin-top: 30px;
     border:2px solid #9999A6;
     border-right: none;
     border-left: none;
@@ -670,6 +668,8 @@ hr {
   }
   .video-slider {
     button {
+      display: none;
+
       &.slick-prev {
         &:before {
           content: "";
