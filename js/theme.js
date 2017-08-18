@@ -15,6 +15,7 @@ $(document).ready(function () {
     }
   });
   // end menu phone
+
   // video play
   $('.video-slider').slick({
     dots: true,
@@ -24,6 +25,7 @@ $(document).ready(function () {
     autoplay: true
   });
   // end video play
+
   // tính vi tri cho logo\
   var device = $("html, body").width();
   if(device > 415) {
@@ -65,6 +67,7 @@ $(document).ready(function () {
       marginTop: margin_top },600);
     console.log(margin_top);
   });
+
   $('a[href*="#"]')
   // Remove links that don't actually link to anything
       .not('[href="#"]')
@@ -100,6 +103,7 @@ $(document).ready(function () {
           }
         }
       });
+
   //tinh height cho content and margin-top logo
   var heightDevice = $(window).height();
   var Header = $(".header").outerHeight();
@@ -121,6 +125,7 @@ $(document).ready(function () {
       $(".content-bg").css("margin-top",paddingLogo2);
     }
   }
+
   $(window).scroll(function() {
     var menuScroll = $(".topics-slider");
     var device = $("html, body").width();
@@ -157,6 +162,7 @@ $(document).ready(function () {
     $(".content-page-02").animate({
       marginTop: margin_top },600);
     console.log(margin_top);
+
     var navScroll = $(".nav-bar");
     if($(this).scrollTop() > 75) {
       navScroll.addClass("nav-scroll");
@@ -165,7 +171,6 @@ $(document).ready(function () {
       navScroll.removeClass("nav-scroll");
     }
   });
-
 });
 $(window).resize(function () {
   var device = $("html, body").width();
@@ -200,5 +205,4 @@ $(window).resize(function () {
       }
     }
   }
-
 });
