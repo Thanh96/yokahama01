@@ -126,6 +126,7 @@ hr {
     background-color: #f9f9f9;
     color: #000;
     width: 17%;
+    height: 100%;
     @include bp-desktop-sm() {
       display: block;
     }

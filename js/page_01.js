@@ -82,7 +82,12 @@ $(document).ready(function () {
   $(window).scroll(function () {
 
     var currentScroll = $(window).scrollTop();
-    var marginTop;
+    if(currentScroll > 75) {
+      $(".nav-bar").addClass("nav-scroll");
+    }
+    else {
+      $(".nav-bar").removeClass("nav-scroll");
+    }
 
     if($(window).width() > 767) {
       if(menuScroll.height() < 100) {
