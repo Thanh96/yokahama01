@@ -7,8 +7,10 @@ $(document).ready(function () {
     $(".tab-menu").slideToggle(600);
     if ($(".menu-header-phone").hasClass("menu-header-phone-show")) {
       $(".menu-header-phone").removeClass("menu-header-phone-show");
+      $("html, body").css("overflow-y","auto");
     } else {
       $(".menu-header-phone").addClass("menu-header-phone-show");
+      $("html, body").css("overflow-y","hidden");
     }
   });
   // end show menu phone

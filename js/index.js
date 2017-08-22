@@ -79,7 +79,7 @@ $(document).ready(function () {
 });
 $(window).resize(function () {
     var device = $("html, body").width();
-    if (device > 767) {
+    if (device < 767) {
       var device_height = $(window).height();
       var heightTT = $(".wrapper").height();
       console.log(device_height);
@@ -89,6 +89,7 @@ $(window).resize(function () {
       } else {
         $("html, body").css("overflow-y","hidden");
       }
+      if (device > 767) {
         var widthContent = $(".slider").width();
         var widthNav = $(".nav-bar").width();
         var heightHeader = $(".header").outerHeight();
@@ -97,9 +98,9 @@ $(window).resize(function () {
         var heightSlider = heightContent - 500 - heightHeader;
         var topLogo = heightSlider / 2 + heightHeader;
         var leftLogo = widthSlider / 2;
-
         $(".content-bg").css("top", topLogo);
         $(".content-bg").css("left", leftLogo);
+      }
         var heightDevice = $(window).height();
         var Header = $(".header").outerHeight();
         var heightFooter = $(".footer-phone").outerHeight();
