@@ -47,25 +47,25 @@
 }
 
 @mixin bp-desktop-sm {
-  @media only screen and (min-width: 769px) {
+  @media only screen and (min-width: 768px) {
     @content;
   }
 }
 
 @mixin bp-desktop-md {
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1024px) {
     @content;
   }
 }
 
 @mixin bp-desktop-lg {
-  @media only screen and (min-width: 1367px) {
+  @media only screen and (min-width: 1366px) {
     @content;
   }
 }
 
 @mixin bp-desktop-ultra {
-  @media only screen and (min-width: 1441px) {
+  @media only screen and (min-width: 1440px) {
     @content;
   }
 }

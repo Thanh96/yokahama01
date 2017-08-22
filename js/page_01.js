@@ -7,10 +7,8 @@ $(document).ready(function () {
     $(".tab-menu").slideToggle(600);
     if ($(".menu-header-phone").hasClass("menu-header-phone-show")) {
       $(".menu-header-phone").removeClass("menu-header-phone-show");
-      $("body, html").css("overflow-y", "scroll");
     } else {
       $(".menu-header-phone").addClass("menu-header-phone-show");
-      $("body, html").css("overflow-y", "hidden");
     }
   });
   // end show menu phone
@@ -90,21 +88,28 @@ $(document).ready(function () {
       } else {
         marginTop = 322;
       }
+      if (currentScroll  >= fixmeTop) {           // apply position: fixed if you
+        menuScroll.addClass("scrollTopMenu");
+        contentScroll.css("margin-top", marginTop);
+      } else {                                   // apply position: static
+        menuScroll.removeClass("scrollTopMenu");
+        contentScroll.css("margin-top", 0);
+      }
     } else {
       if(menuScroll.height() > 100) {
         marginTop = 401;
       } else {
         marginTop = 101;
       }
+      if (currentScroll + 50 >= fixmeTop) {           // apply position: fixed if you
+        menuScroll.addClass("scrollTopMenu");
+        contentScroll.css("margin-top", marginTop);
+      } else {                                   // apply position: static
+        menuScroll.removeClass("scrollTopMenu");
+        contentScroll.css("margin-top", 0);
+      }
     }
 
-    if (currentScroll >= fixmeTop) {           // apply position: fixed if you
-      menuScroll.addClass("scrollTopMenu");
-      contentScroll.css("margin-top", marginTop);
-    } else {                                   // apply position: static
-      menuScroll.removeClass("scrollTopMenu");
-      contentScroll.css("margin-top", 0);
-    }
   });
   // end menu topic scroll
 

@@ -2,12 +2,13 @@ html, body {
   position: relative;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   overflow: -moz-scrollbars-none;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
   padding: 0; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (min-width: 641px) {
     html html, html body, body html, body body {
-      font-size: 12px; } }
+      font-size: 13px;
+      overflow-y: hidden; } }
 
 ul {
   margin: 0;
@@ -34,7 +35,7 @@ hr {
       background-color: #000000;
       height: 5px;
       width: 100%; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .header {
         position: relative;
         height: 75px;
@@ -45,7 +46,7 @@ hr {
     .wrapper .header .logo-header {
       float: left;
       width: 80%; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header .logo-header {
           margin: 10px 0 5px 135px;
           width: auto; } }
@@ -59,7 +60,7 @@ hr {
       text-indent: -9999px;
       top: 9px;
       width: 35px; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header .menu-header-phone {
           display: none; } }
       .wrapper .header .menu-header-phone.menu-header-phone-show {
@@ -67,7 +68,7 @@ hr {
         background-size: 35px 60px; }
     .wrapper .header .menu-header-tb {
       display: none; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header .menu-header-tb {
           display: block;
           float: right;
@@ -93,7 +94,7 @@ hr {
         border: 1px solid #999999; }
     .wrapper .header img {
       width: 50%; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header img {
           width: 100%; } }
   .wrapper .nav-bar {
@@ -107,7 +108,7 @@ hr {
     background-color: #f9f9f9;
     color: #000;
     width: 17%; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .nav-bar {
         display: block; } }
     .wrapper .nav-bar.nav-scroll {
@@ -185,7 +186,7 @@ hr {
     overflow-y: scroll;
     height: 100%;
     z-index: 100; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .tab-menu {
         display: none; } }
     .wrapper .tab-menu .home-menu {
@@ -253,7 +254,7 @@ hr {
         border-bottom: 1px solid #ffffff; }
   .wrapper .page01-content {
     position: relative; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .page01-content {
         width: calc(100% - 17%); } }
     .wrapper .page01-content .scrollTopMenu {
@@ -264,7 +265,7 @@ hr {
       padding-bottom: 15px;
       left: 0;
       width: 100%; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .page01-content .scrollTopMenu {
           width: auto;
           top: 0;
@@ -282,21 +283,22 @@ hr {
       font-size: 2rem;
       font-family: "Yu Gothic";
       background-color: #000000;
-      width: 60vw;
+      padding: 0 20px;
       color: #ffffff; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .banner .banner-text {
           font-size: 2.8rem;
-          width: 40vw; } }
-      @media only screen and (min-width: 1025px) {
+          padding: 10px 30px; } }
+      @media only screen and (min-width: 1024px) {
         .wrapper .banner .banner-text {
-          width: 20vw; } }
+          width: 15px 35px; } }
       .wrapper .banner .banner-text .text-red {
         color: #FA2908; }
       .wrapper .banner .banner-text p {
+        text-align: left;
         font-size: 1rem;
         font-family: Georgia; }
-        @media only screen and (min-width: 641px) {
+        @media only screen and (min-width: 768px) {
           .wrapper .banner .banner-text p {
             font-size: 1.3rem; } }
   .wrapper .container-page-02 {
@@ -304,28 +306,28 @@ hr {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .container-page-02 {
         width: 570px; } }
-    @media only screen and (min-width: 769px) {
-      .wrapper .container-page-02 {
-        width: 650px; } }
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 1024px) {
       .wrapper .container-page-02 {
         width: 780px; } }
+    @media only screen and (min-width: 1366px) {
+      .wrapper .container-page-02 {
+        width: 800px; } }
   .wrapper .topics-slider {
     padding-bottom: 30px; }
     .wrapper .topics-slider .topics {
       font-weight: 700;
       font-family: "Century Gothic";
-      width: 50%;
+      width: 40%;
       padding: 7px 0;
       text-align: center;
       background-color: #000000;
       color: #ffffff;
       font-size: 1em;
       margin: auto; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .topics-slider .topics {
           width: 20%;
           font-size: 1.2rem; } }
@@ -339,7 +341,7 @@ hr {
       border: 1px solid #000000;
       height: 300px;
       overflow-y: scroll; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .topics-slider .menu-slider {
           height: auto;
           overflow-y: hidden; } }
@@ -359,12 +361,12 @@ hr {
         align-items: center; }
         .wrapper .topics-slider .menu-slider .item-menu .menu-info {
           width: 120px; }
-          @media only screen and (min-width: 769px) {
+          @media only screen and (min-width: 768px) {
             .wrapper .topics-slider .menu-slider .item-menu .menu-info {
               width: 200px; } }
     .wrapper .topics-slider .item-select {
       margin-top: 20px; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .topics-slider .item-select {
           text-align: left; } }
       .wrapper .topics-slider .item-select li {
@@ -378,7 +380,7 @@ hr {
         color: #555555;
         text-decoration: none;
         font-weight: bold; }
-        @media only screen and (min-width: 641px) {
+        @media only screen and (min-width: 768px) {
           .wrapper .topics-slider .item-select li {
             font-size: 1.3rem; } }
         .wrapper .topics-slider .item-select li .border {
@@ -421,7 +423,7 @@ hr {
     border: 2px solid #9999A6;
     border-right: none;
     border-left: none; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .part-time {
         width: 35%;
         padding: 15px 0; } }
@@ -445,26 +447,26 @@ hr {
       transform: translateX(-50%); }
     .wrapper .part-content .part-left {
       float: left;
-      width: 110px; }
-      @media only screen and (min-width: 641px) {
+      width: 70%; }
+      @media only screen and (min-width: 768px) {
         .wrapper .part-content .part-left {
           width: 210px; } }
-      @media only screen and (min-width: 769px) {
+      @media only screen and (min-width: 1024px) {
         .wrapper .part-content .part-left {
           width: 250px; } }
-      @media only screen and (min-width: 1025px) {
+      @media only screen and (min-width: 1366px) {
         .wrapper .part-content .part-left {
           width: 300px; } }
     .wrapper .part-content .part-right {
       float: right;
-      width: 110px; }
-      @media only screen and (min-width: 641px) {
+      width: 70%; }
+      @media only screen and (min-width: 768px) {
         .wrapper .part-content .part-right {
           width: 210px; } }
-      @media only screen and (min-width: 769px) {
+      @media only screen and (min-width: 1024px) {
         .wrapper .part-content .part-right {
           width: 250px; } }
-      @media only screen and (min-width: 1025px) {
+      @media only screen and (min-width: 1366px) {
         .wrapper .part-content .part-right {
           width: 300px; } }
     .wrapper .part-content .part {
@@ -494,11 +496,8 @@ hr {
             font-weight: 700;
             font-size: 1.2rem;
             position: absolute;
-            bottom: 0;
-            left: -40px; }
-            @media only screen and (min-width: 641px) {
-              .wrapper .part-content .part.part-detail-right .part-line p {
-                right: -30px; } }
+            bottom: -20px;
+            left: -50px; }
       .wrapper .part-content .part.part-detail-left {
         padding-right: 0; }
         .wrapper .part-content .part.part-detail-left .part-line {
@@ -524,11 +523,8 @@ hr {
             font-weight: 700;
             font-size: 1.2rem;
             position: absolute;
-            bottom: 0;
-            right: -30px; }
-            @media only screen and (min-width: 641px) {
-              .wrapper .part-content .part.part-detail-left .part-line p {
-                right: -40px; } }
+            bottom: -20px;
+            right: -50px; }
       .wrapper .part-content .part .part-detail {
         display: table-cell; }
         .wrapper .part-content .part .part-detail .part-title {
@@ -553,7 +549,7 @@ hr {
     background-color: #000;
     color: #fff;
     line-height: 50px; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .footer {
         display: block; } }
     .wrapper .footer ul li {
@@ -568,14 +564,14 @@ hr {
     .wrapper .footer .pull-right {
       font-size: .8rem; }
   .wrapper .footer-phone {
-    border: 1px solid #9999A6;
+    border-top: 1px solid #9999A6;
     font-family: 'Open Sans', sans-serif;
     display: block;
     position: relative;
     z-index: 9;
     font-size: 1rem;
     color: #898989; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .footer-phone {
         display: none; } }
     .wrapper .footer-phone h1 {

@@ -1,14 +1,27 @@
 $(document).ready(function () {
+    //scroll content
+    var device = $("html, body").width();
+    if(device < 767) {
+      var device_height = $(window).height();
+      var heightTT = $(".wrapper").height();
+      console.log(device_height);
+      console.log(heightTT);
+      if (heightTT > device_height) {
+        $("html, body").css("overflow-y", "scroll");
+      } else {
+        $("html, body").css("overflow-y", "hidden");
+      }
+    }
+    // end scroll
+
     // show menu phone
     $(".menu-header-phone").click(function () {
         $(".tab-menu").slideToggle(600);
         if ($(".menu-header-phone").hasClass("menu-header-phone-show")) {
             $(".menu-header-phone").removeClass("menu-header-phone-show");
-            $("body, html").css("overflow-y", "scroll");
         }
         else {
             $(".menu-header-phone").addClass("menu-header-phone-show");
-            $("body, html").css("overflow-y", "hidden");
         }
     });
     // end menu phone
@@ -26,7 +39,7 @@ $(document).ready(function () {
     // position logo
     var device = $("html, body").width();
 
-    if (device > 415) {
+    if (device > 767) {
         var widthContent = $(".slider").width();
         var widthNav = $(".nav-bar").width();
         var heightHeader = $(".header").outerHeight();
@@ -52,23 +65,30 @@ $(document).ready(function () {
 
     if (heightDevice > heightIndex + heightFooter + Header) {
         $(".contentPage").height(heightNewContent);
-        if (device < 415) {
+        if (device < 767) {
             var paddingLogo1 = (heightNewContent - heightLogo - Header) / 2 + Header;
             $(".content-bg").css("margin-top", paddingLogo1);
         }
     } else {
-        if (device < 415) {
+        if (device < 767) {
             var paddingLogo2 = (heightIndex - heightLogo ) / 2 + Header;
             $(".content-bg").css("margin-top", paddingLogo2);
         }
     }
 
-
 });
 $(window).resize(function () {
     var device = $("html, body").width();
-
-    if (device > 415) {
+    if (device > 767) {
+      var device_height = $(window).height();
+      var heightTT = $(".wrapper").height();
+      console.log(device_height);
+      console.log(heightTT);
+      if(heightTT > device_height) {
+        $("html, body").css("overflow-y","scroll");
+      } else {
+        $("html, body").css("overflow-y","hidden");
+      }
         var widthContent = $(".slider").width();
         var widthNav = $(".nav-bar").width();
         var heightHeader = $(".header").outerHeight();
@@ -82,7 +102,6 @@ $(window).resize(function () {
         $(".content-bg").css("left", leftLogo);
         var heightDevice = $(window).height();
         var Header = $(".header").outerHeight();
-
         var heightFooter = $(".footer-phone").outerHeight();
         var heightIndex = $(".contentPage").outerHeight();
         var heightNewContent = heightDevice - heightFooter;
@@ -91,12 +110,12 @@ $(window).resize(function () {
         if (heightDevice > heightIndex + heightFooter + Header) {
             $(".contentPage").height(heightNewContent);
 
-            if (device < 415) {
+            if (device < 767) {
                 var paddingLogo1 = (heightNewContent - heightLogo - Header) / 2 + Header;
                 $(".content-bg").css("margin-top", paddingLogo1);
             }
         } else {
-            if (device < 415) {
+            if (device < 767) {
                 var paddingLogo2 = (heightIndex - heightLogo ) / 2 + Header;
                 $(".content-bg").css("margin-top", paddingLogo2);
             }

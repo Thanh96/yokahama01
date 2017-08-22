@@ -5,14 +5,9 @@ html, body {
   font-size: 13px;
   margin: 0;
   padding: 0; }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (min-width: 641px) {
     html html, html body, body html, body body {
-      font-size: 12px;
-      overflow-x: hidden;
-      overflow-y: scroll; } }
-  @media only screen and (min-width: 321px) {
-    html html, html body, body html, body body {
-      font-size: 12px;
+      font-size: 13px;
       overflow-y: hidden;
       overflow-x: hidden; } }
 
@@ -51,7 +46,7 @@ hr {
       background-color: #000;
       height: 5px;
       width: 100%; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .header {
         height: 75px;
         line-height: 0;
@@ -61,7 +56,7 @@ hr {
     .wrapper .header .logo-header {
       float: left;
       width: 80%; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header .logo-header {
           margin: 10px 0 5px 135px;
           width: auto; } }
@@ -75,12 +70,15 @@ hr {
       text-indent: -9999px;
       top: 9px;
       width: 35px; }
+      @media only screen and (min-width: 768px) {
+        .wrapper .header .menu-header-phone {
+          display: none; } }
       .wrapper .header .menu-header-phone.menu-header-phone-show {
         background: url("../img/sp_menu_btn.png") no-repeat left bottom;
         background-size: 35px 60px; }
     .wrapper .header .menu-header-tb {
       display: none; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header .menu-header-tb {
           display: block;
           float: right;
@@ -107,7 +105,7 @@ hr {
           border: 1px solid #999999; }
     .wrapper .header img {
       width: 50%; }
-      @media only screen and (min-width: 641px) {
+      @media only screen and (min-width: 768px) {
         .wrapper .header img {
           width: 100%; } }
 @keyframes example {
@@ -136,7 +134,7 @@ hr {
     background-size: cover; } }
   .wrapper .slider {
     display: none; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .slider {
         display: block;
         overflow: hidden;
@@ -146,12 +144,12 @@ hr {
           height: 100%;
           width: 100%;
           background-size: cover;
-          -webkit-animation: example 20s infinite;
-          -khtml-animation: example 20s infinite;
-          -moz-animation: example 20s infinite;
-          -ms-animation: example 20s infinite;
-          -o-animation: example 20s infinite;
-          animation: example 20s infinite; }
+          -webkit-animation: example 10s infinite;
+          -khtml-animation: example 10s infinite;
+          -moz-animation: example 10s infinite;
+          -ms-animation: example 10s infinite;
+          -o-animation: example 10s infinite;
+          animation: example 10s infinite; }
         .wrapper .slider .content-bg {
           position: absolute;
           width: 500px;
@@ -197,7 +195,7 @@ hr {
   .wrapper .bg-phone {
     padding-bottom: 20px;
     border-top: 7px solid #000; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .bg-phone {
         display: none; } }
     .wrapper .bg-phone .content-bg {
@@ -214,8 +212,6 @@ hr {
             height: 350px; } }
         .wrapper .bg-phone .content-bg .logo-bg .img-bg {
           padding-bottom: 30px; }
-          .wrapper .bg-phone .content-bg .logo-bg .img-bg img {
-            width: 40%; }
         .wrapper .bg-phone .content-bg .logo-bg .text-bg {
           font-size: 2.8rem;
           font-family: 'Six Caps', sans-serif;
@@ -232,11 +228,12 @@ hr {
           width: 60%;
           border: 1px solid #fff;
           margin: 0 auto;
-          border-radius: 20px; }
+          border-radius: 20px;
+          max-width: 250px; }
           @media only screen and (min-width: 321px) {
             .wrapper .bg-phone .content-bg .logo-bg .label-bg {
               width: 45%; } }
-          @media only screen and (min-width: 769px) {
+          @media only screen and (min-width: 768px) {
             .wrapper .bg-phone .content-bg .logo-bg .label-bg {
               width: 40%; } }
       .wrapper .bg-phone .content-bg .text-content {
@@ -246,7 +243,7 @@ hr {
         color: #fff;
         font-size: 1rem;
         line-height: 22px; }
-        @media only screen and (min-width: 641px) {
+        @media only screen and (min-width: 768px) {
           .wrapper .bg-phone .content-bg .text-content {
             font-size: 1.1rem; } }
   .wrapper .tab-menu {
@@ -261,7 +258,7 @@ hr {
     overflow-y: scroll;
     height: 100%;
     z-index: 10; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .tab-menu {
         display: none; } }
     .wrapper .tab-menu .home-menu {
@@ -340,7 +337,7 @@ hr {
     background-color: #000;
     color: #fff;
     line-height: 50px; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .footer {
         display: block; } }
     .wrapper .footer ul li {
@@ -368,7 +365,7 @@ hr {
     color: #fff;
     width: 17.5%;
     height: calc(100% - 75px - 50px); }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .nav-bar {
         display: block; } }
     .wrapper .nav-bar .bar-home li {
@@ -434,7 +431,7 @@ hr {
     z-index: 9;
     font-size: 1rem;
     color: #898989; }
-    @media only screen and (min-width: 641px) {
+    @media only screen and (min-width: 768px) {
       .wrapper .footer-phone {
         display: none; } }
     .wrapper .footer-phone h1 {
