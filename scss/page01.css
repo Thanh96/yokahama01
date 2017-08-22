@@ -50,12 +50,21 @@ hr {
           margin: 10px 0 5px 135px;
           width: auto; } }
     .wrapper .header .menu-header-phone {
-      float: right;
-      margin-top: 13px;
-      width: 20%; }
+      background: url(../img/sp_menu_btn.png) no-repeat left top;
+      background-size: 35px 60px;
+      cursor: pointer;
+      height: 29px;
+      position: absolute;
+      right: 10px;
+      text-indent: -9999px;
+      top: 9px;
+      width: 35px; }
       @media only screen and (min-width: 641px) {
         .wrapper .header .menu-header-phone {
           display: none; } }
+      .wrapper .header .menu-header-phone.menu-header-phone-show {
+        background: url("../img/sp_menu_btn.png") no-repeat left bottom;
+        background-size: 35px 60px; }
     .wrapper .header .menu-header-tb {
       display: none; }
       @media only screen and (min-width: 641px) {
@@ -147,7 +156,9 @@ hr {
         border: 1px solid #ffffff; }
     .wrapper .nav-bar .bar-img {
       text-align: center;
-      margin: 60px 30px; }
+      margin: 30px;
+      margin-top: 50px;
+      border-bottom: 1px solid #ffffff; }
     .wrapper .nav-bar .bar-new {
       color: #000;
       margin: 0 30px; }
@@ -173,7 +184,7 @@ hr {
     color: #fff;
     overflow-y: scroll;
     height: 100%;
-    z-index: 10; }
+    z-index: 100; }
     @media only screen and (min-width: 641px) {
       .wrapper .tab-menu {
         display: none; } }
@@ -226,9 +237,9 @@ hr {
         border: 2px solid #ffffff; }
     .wrapper .tab-menu .bar-img {
       text-align: center;
-      padding-bottom: 45px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #ffffff; }
+      border-bottom: 1px solid #fff;
+      padding-bottom: 30px;
+      margin-bottom: 20px; }
     .wrapper .tab-menu .bar-new {
       margin: 0 30px;
       margin-bottom: 70px; }
@@ -357,36 +368,46 @@ hr {
         .wrapper .topics-slider .item-select {
           text-align: left; } }
       .wrapper .topics-slider .item-select li {
+        position: relative;
         list-style: none;
         font-size: 1.1rem;
         font-family: "Yu Gothic";
         display: inline-table;
-        padding: 0 10px; }
+        margin-left: 15px;
+        cursor: pointer;
+        color: #555555;
+        text-decoration: none;
+        font-weight: bold; }
         @media only screen and (min-width: 641px) {
           .wrapper .topics-slider .item-select li {
-            padding: 0 25px;
             font-size: 1.3rem; } }
-        .wrapper .topics-slider .item-select li a {
-          color: #555555;
-          text-decoration: none;
+        .wrapper .topics-slider .item-select li .border {
+          width: 1px;
+          height: 100%;
+          position: absolute;
+          background-color: #000;
+          right: -15px;
+          top: 0; }
+        .wrapper .topics-slider .item-select li .line {
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: #FA2908;
           -webkit-transition: 0.5s;
           -khtml-transition: 0.5s;
           -moz-transition: 0.5s;
           -ms-transition: 0.5s;
           -o-transition: 0.5s;
-          transition: 0.5s;
+          transition: 0.5s; }
+        .wrapper .topics-slider .item-select li.active {
+          color: #000;
+          text-decoration: none;
           font-weight: bold; }
-          .wrapper .topics-slider .item-select li a:focus {
-            color: #000;
-            border-bottom: 1px solid #FA2908; }
-          .wrapper .topics-slider .item-select li a:hover {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #FA2908;
-            font-weight: bold; }
+          .wrapper .topics-slider .item-select li.active .line {
+            width: 100%; }
         .wrapper .topics-slider .item-select li.item-border {
-          padding-left: 0;
-          border-right: 1px solid #000; }
+          margin-right: 15px;
+          margin-left: 0; }
   .wrapper .part-time {
     font-weight: 700;
     color: #9999A6;
@@ -514,12 +535,14 @@ hr {
           font-weight: 700; }
         .wrapper .part-content .part .part-detail .part-info {
           margin-top: 10px; }
-      .wrapper .part-content .part.part-1894 {
-        margin-top: -150px; }
+      .wrapper .part-content .part.item-history {
+        display: none; }
       .wrapper .part-content .part.part-1996 {
         margin-top: -100px; }
-      .wrapper .part-content .part.part-1884 {
-        margin-top: 40px; }
+  .wrapper .part-1884 {
+    margin-top: 60px; }
+  .wrapper .part-1894 {
+    margin-top: -150px; }
   .wrapper .footer {
     font-family: 'Open Sans', sans-serif;
     display: none;

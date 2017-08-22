@@ -1,14 +1,13 @@
 $(document).ready(function () {
     // show menu phone
-    $(".menu-header-phone img").click(function () {
-        var show = $(".menu-header-phone").css("margin-top");
+    $(".menu-header-phone").click(function () {
         $(".tab-menu").slideToggle(600);
-        if (show == "-29px") {
-            $(".menu-header-phone").css("margin-top", "10px");
+        if ($(".menu-header-phone").hasClass("menu-header-phone-show")) {
+            $(".menu-header-phone").removeClass("menu-header-phone-show");
             $("body, html").css("overflow-y", "scroll");
         }
         else {
-            $(".menu-header-phone").css("margin-top", "-29px");
+            $(".menu-header-phone").addClass("menu-header-phone-show");
             $("body, html").css("overflow-y", "hidden");
         }
     });

@@ -2,6 +2,34 @@
  * Created by Truong Thanh on 8/18/2017.
  */
 $(document).ready(function () {
+  // show menu phone
+  $(".menu-header-phone").click(function () {
+    $(".tab-menu").slideToggle(600);
+    if ($(".menu-header-phone").hasClass("menu-header-phone-show")) {
+      $(".menu-header-phone").removeClass("menu-header-phone-show");
+      $("body, html").css("overflow-y", "scroll");
+    } else {
+      $(".menu-header-phone").addClass("menu-header-phone-show");
+      $("body, html").css("overflow-y", "hidden");
+    }
+  });
+  // end show menu phone
+
+  // click menu
+  $(".select-item").click(function () {
+    $(".item-select li").removeClass("active");
+    $(this).addClass("active");
+    $(".item-product").fadeIn(300);
+    $(".item-history").fadeOut(300);
+  });
+  $(".select-history").click(function () {
+    $(".item-select li").removeClass("active");
+    $(this).addClass("active");
+    $(".item-product").fadeOut(500);
+    $(".item-history").fadeIn(500);
+  });
+  //end click menu
+
   // video play
   $('.video-slider').slick({
     dots: true,

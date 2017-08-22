@@ -59,11 +59,21 @@ hr {
       }
     }
     .menu-header-phone {
-      float: right;
-      margin-top: 13px;
-      width: 20%;
+      background: url(../img/sp_menu_btn.png) no-repeat left top;
+      background-size: 35px 60px;
+      cursor: pointer;
+      height: 29px;
+      position: absolute;
+      right: 10px;
+      text-indent: -9999px;
+      top: 9px;
+      width: 35px;
       @include bp-tablet-vertical() {
         display: none;
+      }
+      &.menu-header-phone-show {
+        background: url("../img/sp_menu_btn.png")no-repeat left bottom;
+        background-size:35px 60px;
       }
     }
     .menu-header-tb {
@@ -176,7 +186,9 @@ hr {
     }
     .bar-img {
       text-align: center;
-      margin: 60px 30px;
+      margin: 30px;
+      margin-top: 50px;
+      border-bottom: 1px solid #ffffff;
     }
     .bar-new {
       color: #000;
@@ -209,7 +221,7 @@ hr {
     color: #fff;
     overflow-y: scroll;
     height: 100%;
-    z-index: 10;
+    z-index: 100;
     @include bp-tablet-vertical() {
       display: none;
     }
@@ -270,9 +282,9 @@ hr {
     }
     .bar-img {
       text-align: center;
-      padding-bottom: 45px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #ffffff;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
     }
     .bar-new {
       margin: 0 30px;
@@ -418,34 +430,45 @@ hr {
         text-align: left;
       }
       li {
+        position: relative;
         list-style: none;
         font-size: 1.1rem;
         font-family: "Yu Gothic";
         display: inline-table;
-        padding: 0 10px;
+        margin-left: 15px;
+        cursor: pointer;
+        color: #555555;
+        text-decoration: none;
+        font-weight: bold;
         @include bp-tablet-vertical() {
-          padding: 0 25px;
           font-size: 1.3rem;
         }
-        a {
-          color: #555555;
-          text-decoration: none;
+        .border {
+          width: 1px;
+          height: 100%;
+          position: absolute;
+          background-color: #000;
+          right: -15px;
+          top: 0;
+        }
+        .line {
+          position: absolute;
+          width: 0;
+          height: 2px;
+          background-color: #FA2908;
           @include css3-prefix(transition,.5s);
+        }
+        &.active {
+          color: #000;
+          text-decoration: none;
           font-weight: bold;
-          &:focus {
-            color: #000;
-            border-bottom: 1px solid #FA2908;
-          }
-          &:hover {
-            color: #000;
-            text-decoration: none;
-            border-bottom: 1px solid #FA2908;
-            font-weight: bold;
+          .line {
+            width: 100%;
           }
         }
         &.item-border {
-          padding-left: 0;
-          border-right: 1px solid #000;
+          margin-right: 15px;
+          margin-left: 0;
         }
       }
     }
@@ -593,18 +616,20 @@ hr {
           margin-top: 10px;
         }
       }
-      &.part-1894 {
-        margin-top: -150px;
+      &.item-history {
+        display: none;
       }
       &.part-1996 {
         margin-top: -100px;
       }
-      &.part-1884 {
-        margin-top: 40px;
-      }
     }
   }
-
+  .part-1884 {
+    margin-top: 60px;
+  }
+  .part-1894 {
+    margin-top: -150px;
+  }
   .footer {
     font-family: 'Open Sans', sans-serif;
     display: none;

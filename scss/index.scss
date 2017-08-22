@@ -81,12 +81,21 @@ hr {
       }
     }
     .menu-header-phone {
-      text-align: center;
-      float: right;
-      margin-top: 10px;
-      width: 20%;
+      background: url(../img/sp_menu_btn.png) no-repeat left top;
+      background-size: 35px 60px;
+      cursor: pointer;
+      height: 29px;
+      position: absolute;
+      right: 10px;
+      text-indent: -9999px;
+      top: 9px;
+      width: 35px;
       @include bp-tablet-vertical() {
         display: none;
+      }
+      &.menu-header-phone-show {
+        background: url("../img/sp_menu_btn.png")no-repeat left bottom;
+        background-size:35px 60px;
       }
     }
     .menu-header-tb {
@@ -429,7 +438,7 @@ hr {
     background-color: #000;
     color: #fff;
     width: 17.5%;
-    height: calc(100vh - 55px);
+    height: calc(100% - 75px - 50px);
     @include bp-tablet-vertical() {
       display: block;
     }

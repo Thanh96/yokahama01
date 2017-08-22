@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory -->
-  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="common/css/bootstrap.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="common/css/animate.css">
@@ -34,7 +34,6 @@
       </div>
       <!--menu header phone-->
       <div class="menu-header-phone">
-        <img src="img/sp_menu_btn.png" alt="">
       </div>
       <!--menu header destop-->
       <div class="menu-header-tb hidden-xs">
@@ -73,7 +72,9 @@
         </div>
       </div>
       <!--end special movie-->
-      <img class="bar-img img-responsive" src="img/img-02.png" alt="">
+      <div class="bar-img img-resposive">
+        <img src="img/img-02.png" alt="">
+      </div>
       <div class="bar-new">
         <h1>NEWS</h1>
         <p class="item-new">
@@ -102,10 +103,10 @@
     <!--end tab menu phone-->
 
     <!--nav bar desktop-->
-    <section class="nav-bar hidden-xs">
+    <section class="nav-bar">
       <div class="content-nav-bar">
         <div >
-          <ul class="bar-home container hidden-xs">
+          <ul class="bar-home container">
             <li class="bar-title"><a href="#">HOME</a></li>
             <li><a href="#">100周年を</a>
               <span class="line"></span></li>
@@ -117,17 +118,17 @@
               <span class="line"></span></li>
           </ul>
         </div>
-        <div class="bar-special hidden-xs">
+        <div class="bar-special">
           <h1>SPECIAL VIDEO</h1>
           <div class="video-slider">
             <iframe src="https://www.youtube.com/embed/6esuOu4zjPI" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/6esuOu4zjPI" frameborder="0" allowfullscreen></iframe>
           </div>
         </div>
-        <div class="bar-img  hidden-xs">
+        <div class="bar-img">
           <img class="img-responsive" src="img/img-02.png" alt="">
         </div>
-        <div class="bar-new hidden-xs">
+        <div class="bar-new">
           <h1>NEWS</h1>
           <p class="item-new">
             <span>2017.08.08</span> <br>
@@ -202,8 +203,11 @@
            </div>
            <div class="topics"><img src="img/p2-img-02.png" alt="">TOPICS</div>
            <ul class="item-select">
-             <li class="item-border"><a href="">会社の歴史</a></li>
-             <li><a href="">製品の歴史</a></li>
+             <li class="select-item item-border active">会社の歴史
+               <span class="line"></span>
+               <div class="border"></div>
+             </li>
+             <li class="select-history">製品の歴 <span class="line"></span></li>
            </ul>
           </div>
         </div>
@@ -217,25 +221,45 @@
         </p>
         <div class="part-content clearfix">
           <div class="line-height"></div>
-          <div id="part-1884" class="wow fadeInUp part part-1884 col-xs-6 part-detail-left">
-            <div class="part-detail part-left">
-              <p class="part-title">
-                山田電線製造所設立
-              </p>
-              <img class="img-responsive" src="img/p2-img-04.jpg" alt="">
-              <p class="part-info">
-                明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
-              </p>
-            </div>
-            <div class="part-line">
-              <div class="line"></div>
-              <div class="circle">
+          <div id="part-1884" class="part-1884 col-xs-6">
+            <div class="part part-detail-left clearfix wow fadeInUp item-product">
+              <div class="part-detail part-left">
+                <p class="part-title">
+                  山田電線製造所設立
+                </p>
+                <img class="img-responsive" src="img/p2-img-04.jpg" alt="">
+                <p class="part-info">
+                  明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
+                </p>
               </div>
-              <p>1884</p>
+              <div class="part-line">
+                <div class="line"></div>
+                <div class="circle">
+                </div>
+                <p>1884</p>
+              </div>
+            </div>
+            <div class="part part-detail-left clearfix item-history">
+              <div class="part-detail part-left">
+                <p class="part-title">
+                  山田電線製造所設立
+                </p>
+                <img class="img-responsive" src="img/p2-img-07.jpg" alt="">
+                <p class="part-info">
+                  明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
+                </p>
+              </div>
+              <div class="part-line">
+                <div class="line"></div>
+                <div class="circle">
+                </div>
+                <p>1884</p>
+              </div>
             </div>
           </div>
-          <div  class="wow fadeInUp part part-1894 col-xs-offset-6 col-xs-6 part-detail-right">
-            <div class="part-detail part-right">
+          <div class="part-1894 col-xs-offset-6 col-xs-6">
+            <div class="wow fadeInUp part  part-detail-right item-product">
+              <div class="part-detail part-right">
               <p class="part-title">
                 山田電線製造所設立
               </p>
@@ -244,14 +268,32 @@
                 明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
               </p>
             </div>
-            <div class="part-line">
+              <div class="part-line">
               <div class="line"></div>
               <div class="circle">
               </div>
               <p>1894</p>
             </div>
+            </div>
+            <div class="part col-xs-offset-6 col-xs-6 clearfix part-detail-right item-history">
+              <div class="part-detail part-right">
+                <p class="part-title">
+                  山田電線製造所設立
+                </p>
+                <img class="img-responsive" src="img/p2-img-06.jpg" alt="">
+                <p class="part-info">
+                  明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
+                </p>
+              </div>
+              <div class="part-line">
+                <div class="line"></div>
+                <div class="circle">
+                </div>
+                <p>1894</p>
+              </div>
+            </div>
           </div>
-          <div id="part-1991" class="wow fadeInUp part part-1991 col-xs-6 part-detail-left">
+          <div id="part-1991" class="wow fadeInUp part part-1991 clearfix col-xs-6 part-detail-left">
             <div class="part-detail part-left">
               <p class="part-title">
                 山田電線製造所設立
@@ -268,24 +310,24 @@
               <p>1991</p>
             </div>
           </div>
-          <div id="part-1996" class="wow fadeInUp part part-1996 col-xs-offset-6 col-xs-6 part-detail-right">
-              <div class="part-detail part-right">
-                <p class="part-title">
-                  山田電線製造所設立
-                </p>
-                <img class="img-responsive" src="img/p2-img-07.jpg" alt="">
-                <p class="part-info">
-                  明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
-                </p>
-              </div>
-              <div class="part-line">
-                <div class="line"></div>
-                <div class="circle">
-                </div>
-                <p>1996</p>
-              </div>
+          <div id="part-1996" class="wow fadeInUp clearfix part part-1996 col-xs-offset-6 col-xs-6 part-detail-right">
+            <div class="part-detail part-right">
+              <p class="part-title">
+                山田電線製造所設立
+              </p>
+              <img class="img-responsive" src="img/p2-img-07.jpg" alt="">
+              <p class="part-info">
+                明治17（1884）年、山田与七により横浜市に設立された山田電線製造所は電線業界の発展に大きく貢献
+              </p>
             </div>
-          <div class="wow fadeInUp part part-1884 col-xs-6 part-detail-left">
+            <div class="part-line">
+              <div class="line"></div>
+              <div class="circle">
+              </div>
+              <p>1996</p>
+            </div>
+          </div>
+          <div class="wow fadeInUp part clearfix col-xs-6 part-detail-left">
             <div class="part-detail part-left">
               <p class="part-title">
                 山田電線製造所設立
@@ -302,7 +344,7 @@
               <p>1884</p>
             </div>
           </div>
-          <div id="part-1894" class="wow fadeInUp part part-1894 col-xs-offset-6 col-xs-6 part-detail-right">
+          <div id="part-1894" class="wow fadeInUp part part-1894 clearfix col-xs-offset-6 col-xs-6 part-detail-right">
             <div class="part-detail part-right">
               <p class="part-title">
                 山田電線製造所設立
